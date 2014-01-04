@@ -1,2 +1,14 @@
 #!/bin/bash
-./UglifyJS/bin/uglifyjs -mt -nc -c $1.js > $1.min.js
+
+link() {
+    f=$1
+    name=$(echo $f | sed -e 's/.js$//g' | sed -e 's/_/ /g')
+    echo -n "<a href='javascript:"
+    ./UglifyJS/bin/uglifyjs -mt -nc -c $f
+    echo -n "'>$namesp</a>"
+}
+
+for i in *.js; do
+    name=$(echo $i | sed -e 's/.js$//g')
+    link $i > INSTALL.$name.html
+done

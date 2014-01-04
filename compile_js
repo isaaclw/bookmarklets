@@ -1,0 +1,2 @@
+#!/bin/bash
+./UglifyJS/bin/uglifyjs -mt -nc -c $1.js > $1.min.js

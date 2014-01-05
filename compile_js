@@ -1,0 +1,7 @@
+#!/bin/bash
+for i in *.js; do
+    namesp=$(echo $i | sed -e 's/.js$//g' | sed -e 's/_/ /g')
+    echo -n "<p><a href='javascript:"
+    ./UglifyJS/bin/uglifyjs -mt -nc -c $i
+    echo "'>$namesp</a></p>"
+done > INSTALL.md

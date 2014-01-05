@@ -4,4 +4,4 @@ for i in *.js; do
     echo -n "<p><a href='javascript:"
     ./UglifyJS/bin/uglifyjs -mt -nc -c $i
     echo "'>$namesp</a></p>"
-done > INSTALL.md
+done > install.html

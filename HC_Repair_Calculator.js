@@ -1,6 +1,7 @@
 total = $('div.bprogress').width();
 list = [];
 CONST = 0.75;
+FACTOR = 2;
 strip = function(a){
     // strip
     return a.replace(/^\s+|\s+$/g,'');
@@ -15,7 +16,7 @@ $('tr.building').each(function() {
     if (!damage.length == 0) {
         if ((damage.children('div.bprogress').children('div.bbar').width() / total) < CONST){
             array = /<em>Status:<\/em>\s+([0-9]+\s+\/\s+[0-9]+)\s+<p>/g.exec(damage.attr('onmouseover'))[1].split('/');
-            need = (ar2int(array, 1) * CONST) - ar2int(array, 0);
+            need = Math.ceil(((ar2int(array, 1) * CONST) - ar2int(array, 0))/FACTOR);
             list = list.concat([[strip($(this).children('td.name').text()), need]]);
         }
     }

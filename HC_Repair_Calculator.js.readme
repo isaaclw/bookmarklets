@@ -1,0 +1,1 @@
+This calculates the repair needed for each building. It does this based on the current status (ie: 27/43) and then multiples the total by 0.75 (75%), and rounds up. Then it subtracts the current (27) and divides by the AP factor ratio (which is usually 2) and adds an additional AP for safety. This total is displayed in a message, which explains per building.

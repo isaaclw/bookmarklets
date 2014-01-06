@@ -22,8 +22,12 @@ $('tr.building').each(function() {
         }
     }
 });
-str = '';
-for (i=0; i<list.length; i++) {
-    str = str + list[i][0] + ' needs ' + list[i][1] + '\n';
+if (list.length == 0) {
+    alert("All appear to be repaired");
+} else {
+    str = '';
+    for (i=0; i<list.length; i++) {
+        str = str + list[i][0] + ' needs ' + list[i][1] + ' so add ' + list[i][2] + '\n';
+    }
+    alert(str);
 }
-alert(str);

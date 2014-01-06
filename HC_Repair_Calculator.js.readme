@@ -1,1 +1,10 @@
-This calculates the repair needed for each building. It does this based on the current status (ie: 27/43) and then multiples the total by 0.75 (75%), and rounds up. Then it subtracts the current (27) and divides by the AP factor ratio (which is usually 2) and adds an additional AP for safety. This total is displayed in a message, which explains per building.
+This calculates the repair needed for each building.<br>
+Let's say a building's status is 12/43. To find the amount needed you:
+<ul>
+    <li>Multiply 43 * 0.75, and round up (to find the maximum damage it can take)</li>
+    <li>Add 1, so that the building is safe</li>
+    <li>Subtract the current status (12)</li>
+    <li>Then divide that all by 2, since each AP gives 2 Status points</li>
+    <li>And round that up also, since you need at least that many points, but not less</li>
+</ul>
+This total is displayed in a message, which explains per building.

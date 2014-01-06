@@ -13,11 +13,12 @@ ar2int = function(a,i){
 
 $('tr.building').each(function() {
     damage = $(this).children('td.rsc').children('div.damage');
-    if (!damage.length == 0) {
-        if ((damage.children('div.bprogress').children('div.bbar').width() / total) < CONST){
-            array = /<em>Status:<\/em>\s+([0-9]+\s+\/\s+[0-9]+)\s+<p>/g.exec(damage.attr('onmouseover'))[1].split('/');
-            need = Math.ceil(((ar2int(array, 1) * CONST) - ar2int(array, 0)) / FACTOR) + 1;
-            list = list.concat([[strip($(this).children('td.name').text()), need]]);
+    if (damage.length > 0) {
+        array = /<em>Status:<\/em>\s+([0-9]+\s+\/\s+[0-9]+)\s+<p>/g.exec(damage.attr('onmouseover'))[1].split('/');
+        need = (Math.ceil(ar2int(array, 1) * CONST) + 1) - ar2int(array, 0);
+        ap = Math.ceil(need / FACTOR);
+        if (ap > 0) {
+            list = list.concat([[strip($(this).children('td.name').text()), need, ap]]);
         }
     }
 });

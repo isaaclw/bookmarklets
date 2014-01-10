@@ -28,9 +28,12 @@ if(loc.indexOf('www.die2nite.com') != -1 && loc.indexOf('city/buildings') != -1)
         alert("All appear to be repaired");
     } else {
         str = '';
+        t = 0;
         for (i=0; i<list.length; i++) {
             str = str + list[i][0] + ' needs ' + list[i][1] + ' so add ' + list[i][2] + '\n';
+            t = t + list[i][2];
         }
+        str = str + 'Total: ' + t;
         alert(str);
     }
 } else {

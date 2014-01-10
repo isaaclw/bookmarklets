@@ -1,7 +1,7 @@
 This calculates the repair needed for each building.<br>
 Let's say a building's status is 12/43. To find the amount needed you:
 <ul>
-    <li>Multiply 43 * 0.75, and round up (to find the maximum damage it can take)</li>
+    <li>Multiply 43 * 0.7, and round up (to find the maximum damage it can take)</li>
     <li>Add 1, so that the building is safe</li>
     <li>Subtract the current status (12)</li>
     <li>Then divide that all by 2, since each AP gives 2 Status points</li>

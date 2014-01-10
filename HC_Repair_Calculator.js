@@ -2,7 +2,7 @@ loc = window.location.href;
 if(loc.indexOf('www.die2nite.com') != -1 && loc.indexOf('city/buildings') != -1){
     total = $('div.bprogress').width();
     list = [];
-    CONST = 0.75;
+    CONST = 0.7;
     FACTOR = 2;
     strip = function(a){
         // strip

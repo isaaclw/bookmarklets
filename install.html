@@ -11,6 +11,9 @@ Let's say a building's status is 12/43. To find the amount needed you:
 </ul>
 This total is displayed in a message, which explains per building.
 </p>
+<p><a href='javascript:$("td.desktopOnly div.single-row-button").each(function(){qty=parseInt($(this).children("span span.auction-browse-quantity").text()),bidelem=$(this).children("span span.auction-browse-bid"),buyelem=$(this).children("span span.auction-browse-buyout"),buyelem.text().indexOf("|")<0&&(buy=buyelem.text().replace(/\D/g,""),buy.length>0&&(buy=parseInt(buy),buyelem.append(" | "+(buy/qty).toFixed(2)))),bidelem.text().indexOf("|")<0&&(bid=bidelem.text().replace(/\D/g,""),bid.length>0&&(bid=parseInt(bid),bidelem.append(" | "+(bid/qty).toFixed(2))))});'>Price Per NeverWinter</a>: 
+A quick script that adds bid and buyout prices per quantity on the Never Winter Auction House
+</p>
 <p><a href='javascript:loc=window.location.href,typeof jQuery!="undefined"&&$(".mw-htmlform-submit").length>0&&loc.indexOf("/wiki/Special:Block/")!=-1?($("#mw-input-wpExpiry").val("infinite"),$("#mw-input-wpReason").val("Spamming links to external sites"),$("#mw-input-wpDisableEmail").attr("checked","true"),$(".mw-htmlform-submit").click()):alert("This is not a wikipedia page, or it can not be submitted.");'>Quick Block</a>: 
 Script that works on Block pages of a wikipedia page. Click it and it will mark them as spam, and submit the form. (blocking the user).
 </p>

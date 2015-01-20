@@ -14,8 +14,8 @@ function getmsg(qrystr) {
 if(loc.indexOf('www.die2nite.com') != -1){
     if (loc.indexOf('ghost/ingame') != -1){
         str = getmsg('td.days');
-    } else if (loc.indexOf('ghost/ranking') != -1){
-        str = getmsg("table.details td:not('.uname'):not('.comment')");
+/*    } else if (loc.indexOf('ghost/ranking') != -1){
+        str = getmsg('table.details td:not(\'.uname\'):not(\'.comment\')'); */
     } else {
         str = 'This only works on Town history pages';
     }

@@ -4,7 +4,7 @@ function getmsg(qrystr) {
     $(qrystr).each(function() {
         score += parseInt($(this).text());
     });
-    additional = (40 - count) * (parseInt($(qrystr + ':first').text()));
+    additional = (40 - count) * (parseInt($(qrystr + ':first').text()) + 1);
     str = score + ' (not including souls)';
     if (additional>0){
         str += '\nand at least ' + additional + ' points if the rest (' + (40 - count) + ') die today\nTotalling: ' + (score + additional);

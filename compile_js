@@ -8,7 +8,7 @@ for d in */; do
             echo "processing $d$i" >&2
             namesp=$(echo $i | sed -e 's/.js$//g' | sed -e 's/_/ /g')
             echo -n "<p><a href='javascript:"
-            ../UglifyJS/bin/uglifyjs -mt -nc -c $i
+            ../UglifyJS/bin/uglifyjs -mt -nc -c $i | sed -e "s/'/\\\\\"/g"
             echo -n "'>$namesp</a>"
             [ -e $i.readme ] && (echo ": "; cat $i.readme)
             echo "</p>"

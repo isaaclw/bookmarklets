@@ -1,6 +1,5 @@
 /*globals $, setTimeout*/
 function menuItem(select, not, menu) {
-    "use strict";
     var elemset = $(select).not(not);
     if (elemset.length > 0) {
         console.log(elemset.length);
@@ -8,21 +7,21 @@ function menuItem(select, not, menu) {
         $('button.closeNotification').click();
         item.contextmenu();
         setTimeout(function () {
-            console.log("click menu");
-            $("button:contains('" + menu + "')").click();
+            console.log('click menu');
+            $('button:contains(' + menu + ')').click();
             setTimeout(function () {
-                console.log("click confirm");
-                $("button:contains('Confirm')").click();
+                console.log('click confirm');
+                $('button:contains(Confirm)').click();
                 setTimeout(function () {
-                    var ok = $('button:contains("OK")');
+                    var ok = $('button:contains(OK)');
                     if (ok.length > 0) {
                         ok.click();
                         setTimeout(function () {
-                            console.log("initiating next iteration");
+                            console.log('initiating next iteration');
                             menuItem(select, not, menu);
                         }, 1500);
                     } else {
-                        console.log("initiating next iteration");
+                        console.log('initiating next iteration');
                         menuItem(select, not, menu);
                     }
                 }, 1500);
@@ -31,7 +30,6 @@ function menuItem(select, not, menu) {
     }
 }
 function openItem(select, not) {
-    "use strict";
     menuItem(select, not, 'Open');
 }
 
@@ -48,4 +46,4 @@ Device -> Pots, assortments
 Junk -> either an emtpty slot, or a junk item
 RewardPack -> some sort of box?
 */
-openItem('.RewardPack', '.Special,.disabled,:has(img[src$="Grimoire.png"])');
+openItem('.RewardPack', ".Special,.disabled,:has(img[src$='Grimoire.png'])");

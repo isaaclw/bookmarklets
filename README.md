@@ -1,12 +1,9 @@
-d2n-bookmarklets
+bookmarklets
 ================
-
-Bookmarklets that enhance the Die2nite experience
-
 
 == Installing ==
 To install click and drag the links, to your bookmark bar.
 
-These links don't work on this page, please use them in Die2nite on the appropriate page.
-
-<a href="INSTALL">Install them here</a>
+<a href="d2n/install.html">Die2nite Bookmarks</a>
+<a href="neverwinter/install.html">Neverwinter Bookmarks</a>
+<a href="wiki/install.html">Wikipedia Bookmarks</a>

@@ -45,4 +45,4 @@ Device -> Pots, assortments
 Junk -> either an emtpty slot, or a junk item
 RewardPack -> some sort of box?
 */
-sellItem('.Upgrade', '.Special,.Gold');
+sellItem('.Junk', '.empty');

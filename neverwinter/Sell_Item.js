@@ -47,5 +47,6 @@ RewardPack -> some sort of box?
 Weapon -> equipment
 */
 sellItem('.Junk', '.empty');
+sellItem('.red', '.Special,.Gold');
 sellItem('.Upgrade', '.Special,.Gold');
 sellItem('.Weapon', '.Special,.Gold');

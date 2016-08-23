@@ -14,10 +14,11 @@ if(loc.indexOf('www.die2nite.com') != -1 && loc.indexOf('city/buildings') != -1)
     }
 
     $('tr.building').each(function() {
+        def=$(this).find("td.def img").length == 1;
         damage = $(this).children('td.rsc').children('div.damage');
         if (damage.length > 0) {
             array = /<em>Status:<\/em>\s+([0-9]+\s+\/\s+[0-9]+)\s+<p>/g.exec(damage.attr('onmouseover'))[1].split('/');
-            need = (Math.ceil(ar2int(array, 1) * CONST) + 1) - ar2int(array, 0);
+            need = (def ? ar2int(array,1) : Math.ceil(ar2int(array,1)*CONST) + 1) - ar2int(array, 0);
             ap = Math.ceil(need / FACTOR);
             if (ap > 0) {
                 list = list.concat([[strip($(this).children('td.name').text()), need, ap]]);

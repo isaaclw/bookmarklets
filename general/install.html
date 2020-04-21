@@ -8,4 +8,4 @@ Hide 'past messages' and 'skipped message' in Spoke.
 <p><a href='javascript:(function(){window.location.href=window.location.href.replace("www.amazon.com","smile.amazon.com")})();'>switch to smile</a>: 
 Switches Regular amazon.com to smile.amazon.com
 </p>
-<p><a href='javascript:$j("table.vs-classic-grid tbody tr th").each(function(e,t){var n=$j(t).text();if(n.indexOf("DevSupport Ticket #")>=0){$j("table.vs-classic-grid tbody tr").each(function(t,n){var r=$j($j(n).children()[e]),i=r.text();i.length>0&&r.html("<a href=\"https://trac.vistashare.net/ticket/"+i+"\">"+i+"</a>")});return}});'>trac-ify</a></p>
+<p><a href='javascript:(function(){$j("table.vs-classic-grid tbody tr th").each(function(e,t){var n=$j(t).text();if(n.indexOf("DevSupport Ticket #")>=0){$j("table.vs-classic-grid tbody tr").each(function(t,n){var r=$j($j(n).children()[e]),i=r.text();i.length>0&&r.html("<a href=\"https://trac.vistashare.net/ticket/"+i+"\">"+i+"</a>")});return}})})();'>trac-ify</a></p>

@@ -1,7 +1,9 @@
-bookmarklets
-================
+# Bookmarklets
 
-== Installing ==
+hosted here: https://isaaclw.github.io/bookmarklets/
+
+## Installing
+
 To install click and drag the links, to your bookmark bar.
 
 <a href="d2n/install.html">Die2nite Bookmarks</a>

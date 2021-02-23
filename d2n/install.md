@@ -1,9 +1,11 @@
 <p><a href='javascript:function e(e){return score=0,count=$(e).length,$(e).each(function(){score+=parseInt($(this).text())}),additional=(40-count)*(parseInt($(e+":first").text())+1),str=score+" (not including souls)",additional>0&&(str+="\nand at least "+additional+" points if the rest ("+(40-count)+") die today\nTotalling: "+(score+additional)),str}loc=window.location.href,loc.indexOf("www.die2nite.com")!=-1?loc.indexOf("ghost/ingame")!=-1?str=e("td.days"):str="This only works on Town history pages":str="This only works on die2nite.com",alert(str);'>Calculate Town Score</a>: 
 An old script to calculate the town score via a soul Town Page. It was useful to calculate scores of towns that didn't show up on the leaderboard (for comparison). However with the Scoring changed, this script has not been modified, and the results are inaccurate.
 </p>
+
 <p><a href='javascript:loc=window.location.href,loc.indexOf("www.die2nite.com")!=-1&&loc.indexOf("city/co")!=-1?(i=[],$("a.tid_user").each(function(){i=i.concat($(this).attr("tid_id"))}),i.length===0&&alert("Can\"t find any citizens in this town, use it on the Citizen\"s page"),_tid.askDiscuss(i.join(","))):alert("Use this on the list of citizens in town");'>Create Twinoid Message From Town</a>: 
 Scoops up all the twinoid IDS from citizens in the town and creates a Twinoid message with all these people included. Run this script from the Citizen's page.
 </p>
+
 <p><a href='javascript:loc=window.location.href;if(loc.indexOf("www.die2nite.com")!=-1&&loc.indexOf("city/buildings")!=-1){total=$("div.bprogress").width(),list=[],CONST=.7,FACTOR=2,strip=function(e){return e.replace(/^\s+|\s+$/g,"")},ar2int=function(e,t){return parseInt(strip(e[t]))},$("tr.building").each(function(){var e="children";def=$(this).find("td.def img").length==1,damage=$(this)[e]("td.rsc")[e]("div.damage"),damage.length>0&&(array=/<em>Status:<\/em>\s+([0-9]+\s+\/\s+[0-9]+)\s+<p>/g.exec(damage.attr("onmouseover"))[1].split("/"),need=(def?ar2int(array,1):Math.ceil(ar2int(array,1)*CONST)+1)-ar2int(array,0),ap=Math.ceil(need/FACTOR),ap>0&&(list=list.concat([[strip($(this)[e]("td.name").text()),need,ap]])))});if(list.length==0)alert("All appear to be repaired");else{str="",t=0;for(i=0;i<list.length;i++)str=str+list[i][0]+" needs "+list[i][1]+" so add "+list[i][2]+"\n",t+=list[i][2];str=str+"Total: "+t,alert(str)}}else alert("Use this on the construction page in town");'>HC Repair Calculator</a>: 
 This calculates the repair needed for each building.<br>
 Let's say a building's status is 12/43. To find the amount needed you:
@@ -16,9 +18,11 @@ Let's say a building's status is 12/43. To find the amount needed you:
 </ul>
 This total is displayed in a message, which explains per building.
 </p>
+
 <p><a href='javascript:data=["en-36692","en-36693","en-36697","en-36698","en-36699","en-36700","en-36701","en-36703"];for(i=0;i<data.length;i++)$("[value="+data[i]+"]").attr("checked",!0);$("#compare-form").submit();'>MMJ12</a>: 
 Custom Javascript written to load the do.not.die2nite data for MMJ #12
 </p>
+
 <p><a href='javascript:data=["37469","37471","37475","37476","37477","37478"];for(i=0;i<data.length;i++)$("[value=en-"+data[i]+"]").attr("checked",!0);$("#compare-form").submit();'>MMJ13</a>: 
 Custom Javascript written to load the do.not.die2nite data for MMJ #13
 </p>

@@ -2,5 +2,7 @@
     if (code === undefined) {
         code = prompt("Code:");
     }
-    window.location.href = "https://reddit.com/" + code;
+    if (code.length === 6) {
+        window.location.href = "https://reddit.com/" + code;
+    }
 })()

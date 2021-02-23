@@ -1,14 +1,15 @@
 function Scroller() {
-    var fnhandle;
+    var fnhandle, timeout = -1;
 
-    function start_scroll(timeout) {
-        if (timeout === undefined) {
-            timeout = 1;
+    function start_scroll(aT) {
+        if (aT === undefined) {
+            aT = 2;
         }
-        scroll(timeout);
+        timeout = aT;
+        scroll();
     }
 
-    function scroll (timeout) {
+    function scroll () {
         window.scrollTo(0,document.body.scrollHeight);
         fnhandle = setTimeout(scroll, timeout * 1000);
     }
@@ -23,4 +24,4 @@ function Scroller() {
 }
 var s = new Scroller()
 alert("Type: 's.stop()' to stop the scrolling");
-s.start(1);
+s.start(2);

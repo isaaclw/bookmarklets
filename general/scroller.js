@@ -22,6 +22,6 @@ function Scroller() {
         stop: cancel
     }
 }
-var s = new Scroller()
+var s = new Scroller();
 alert("Type: 's.stop()' to stop the scrolling");
 s.start(2);
